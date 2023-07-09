@@ -16,10 +16,8 @@ red = (200, 0, 0)
 white = (255, 255, 255)
 
 class Player(pygame.sprite.Sprite):
-    
-    def _init_(self, x, y):
-        super(Player,self).__init__()
-        #pygame.sprite.Sprite._init_(self)
+    def __init__(self, x, y):
+        pygame.sprite.Sprite.__init__(self)
         self.x = x
         self.y = y
 
@@ -62,8 +60,8 @@ class Player(pygame.sprite.Sprite):
 
 class Meteor(pygame.sprite.Sprite):
     
-    def _init_(self, x, y):
-        pygame.sprite.Sprite._init_(self)
+    def __init__(self, x, y):
+        pygame.sprite.Sprite.__init__(self)
         self.x = x
         self.y = y
 
@@ -125,8 +123,8 @@ class Meteor(pygame.sprite.Sprite):
 
 class Missile(pygame.sprite.Sprite):
     
-    def _init_(self, x, y):
-        pygame.sprite.Sprite._init_(self)
+    def __init__(self, x, y):
+        pygame.sprite.Sprite.__init__(self)
         self.rect = Rect(x - 2, y, 4, 8)
 
     def draw(self):
